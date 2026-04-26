@@ -4,7 +4,7 @@ This is a modern backend starter template built with [ElysiaJS](https://elysiajs
 
 ## AI Agent Skills
 
-This project includes AI agent skills (`.agents/skills/`) to help with planning and documentation. Use them by mentioning the skill name in GitHub Copilot Chat:
+This project includes AI agent skills (`.agents/skills/`) to help with planning and documentation. Use them by mentioning the skill name in GitHub Copilot Chat with slash (`/`):
 
 | Skill | When to Use |
 |---|---|
