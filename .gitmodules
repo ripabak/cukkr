@@ -1,0 +1,6 @@
+[submodule "cukkr-frontend"]
+	path = cukkr-frontend
+	url = git@github.com:ripabak/cukkr-frontend.git
+[submodule "cukkr-backend"]
+	path = cukkr-backend
+	url = git@github.com:ripabak/cukkr-backend.git
