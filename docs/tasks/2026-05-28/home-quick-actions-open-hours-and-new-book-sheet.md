@@ -10,13 +10,13 @@
 Currently the Home Dashboard quick action section has 4 shortcut tiles in a single horizontal row — Barbers, Customers, Services, and New Book — where tapping "New Book" navigates directly to the walk-in flow (`/d/new-walk-in`). Two improvements are needed. First, an "Open Hours" shortcut should be added so barbershop owners can quickly reach operating hours configuration without navigating through the Barbershop settings tab (3+ taps away). Second, the "New Book" tile should no longer navigate directly to walk-in; instead it opens a bottom sheet presenting two large horizontal buttons — "Walk-In" and "Appointment" — each with a centered icon and label, allowing the user to choose the correct booking type before proceeding. To fit 5 tiles cleanly, the shortcut row is reorganized into two rows: the first row holds Barbers, Customers, Services (3 tiles at `width: "33.33%"` each), and the second row holds Open Hours and New Book (2 tiles centered). A new `NewBookBottomSheet` component is created in the home feature's components directory, following the same `Modal` + `Animated` + `useFrame()` pattern as `BarbershopSwitcherModal`.
 
 **Implementation Plan:**
-- [ ] In `src/features/home/screens/HomeDashboardScreen.tsx`, add `"openHours"` entry to `SHORTCUT_COLORS` with an appropriate `bg` and `icon` color (e.g., `bg: "#fce7f3"`, `icon: "#db2777"`).
-- [ ] Add `newBookVisible` boolean state (`useState(false)`) in `HomeDashboardScreen`.
-- [ ] Change the `shortcutsRow` container style to `flexWrap: "wrap"` and set each `ShortcutTile` to `style={{ width: "33.33%" }}` for the first 3 tiles (Barbers, Customers, Services) to form row 1.
-- [ ] Add the Open Hours tile and New Book tile as the 4th and 5th `ShortcutTile`, each with `style={{ width: "50%" }}` so they center in row 2.
-- [ ] Wire Open Hours tile `onPress` to `router.push("/d/open-hours")`.
-- [ ] Wire New Book tile `onPress` to `() => setNewBookVisible(true)` (no direct navigation).
-- [ ] Create `src/features/home/components/NewBookBottomSheet.tsx`:
+- [x] In `src/features/home/screens/HomeDashboardScreen.tsx`, add `"openHours"` entry to `SHORTCUT_COLORS` with an appropriate `bg` and `icon` color (e.g., `bg: "#fce7f3"`, `icon: "#db2777"`).
+- [x] Add `newBookVisible` boolean state (`useState(false)`) in `HomeDashboardScreen`.
+- [x] Change the `shortcutsRow` container style to `flexWrap: "wrap"` and set each `ShortcutTile` to `style={{ width: "33.33%" }}` for the first 3 tiles (Barbers, Customers, Services) to form row 1.
+- [x] Add the Open Hours tile and New Book tile as the 4th and 5th `ShortcutTile`, each with `style={{ width: "50%" }}` so they center in row 2.
+- [x] Wire Open Hours tile `onPress` to `router.push("/d/open-hours")`.
+- [x] Wire New Book tile `onPress` to `() => setNewBookVisible(true)` (no direct navigation).
+- [x] Create `src/features/home/components/NewBookBottomSheet.tsx`:
   - `Props: { visible: boolean; onClose: () => void }`
   - Use `Modal` (`transparent`, `statusBarTranslucent`, `animationType="none"`) from React Native.
   - Animate the panel sliding up from the bottom using `Animated.spring` on a `translateY` value (from `panelHeight` to `0` on open, reverse on close), driven by a `useEffect` watching `visible`.
@@ -30,8 +30,8 @@ Currently the Home Dashboard quick action section has 4 shortcut tiles in a sing
   - Walk-In button `onPress`: calls `onClose()` then `router.push("/d/new-walk-in")`.
   - Appointment button `onPress`: calls `onClose()` then `router.push("/d/new-appointment")`.
   - Import `useRouter` from `expo-router`.
-- [ ] In `HomeDashboardScreen.tsx`, import `NewBookBottomSheet` and mount it inside the root `View` alongside existing modals. Pass `visible={newBookVisible}` and `onClose={() => setNewBookVisible(false)}`.
-- [ ] Update `docs/track_pages_and_components.md` to record the new `NewBookBottomSheet` component.
+- [x] In `HomeDashboardScreen.tsx`, import `NewBookBottomSheet` and mount it inside the root `View` alongside existing modals. Pass `visible={newBookVisible}` and `onClose={() => setNewBookVisible(false)}`.
+- [x] Update `docs/track_pages_and_components.md` to record the new `NewBookBottomSheet` component.
 
 **Manual Verification (Human Checklist):**
 - [ ] Open the app and navigate to the Home Dashboard tab. Confirm the shortcut row now shows 5 tiles arranged in two rows: Barbers, Customers, Services on the first row, and Open Hours, New Book on the second row, all visually balanced.
