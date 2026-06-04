@@ -12,34 +12,34 @@ Ada tiga bug terkait yang perlu diselesaikan bersamaan. Pertama, tombol Decline 
 **Implementation Plan:**
 
 **Backend:**
-- [ ] Di `cukkr-backend/src/modules/bookings/model.ts`, ubah `BookingDeclineInput.reason` dari `t.String({ minLength: 1, maxLength: 500 })` menjadi `t.Optional(t.String({ maxLength: 500 }))`.
-- [ ] Di `cukkr-backend/src/modules/bookings/service.ts` method `declineBooking`, ubah `notes: input.reason` menjadi `notes: input.reason ?? null` agar tidak crash ketika reason tidak dikirim.
-- [ ] Di `cukkr-backend/src/modules/notifications/schema.ts`, tambahkan kolom `actionedAs: text('actioned_as')` (nullable, default null) ke tabel `notification`.
-- [ ] Di `cukkr-backend/src/modules/notifications/model.ts`, tambahkan field `actionedAs: t.Nullable(t.Union([t.Literal('accepted'), t.Literal('declined')]))` ke `NotificationListItem`.
-- [ ] Di `cukkr-backend/src/modules/notifications/service.ts` method `toNotificationListItem`, include `actionedAs: row.actionedAs as ...` dari row database.
-- [ ] Di `cukkr-backend/src/modules/notifications/service.ts` method `executeAcceptAction` (blok `booking`), setelah `BookingService.acceptBooking` berhasil, update `notification.actionedAs = 'accepted'` untuk notification row yang bersangkutan.
-- [ ] Di `cukkr-backend/src/modules/notifications/service.ts` method `executeDeclineAction` (blok `booking`), hapus baris `if (!reason) throw new AppError(...)`, jadikan reason opsional, dan setelah `BookingService.declineBooking` berhasil update `notification.actionedAs = 'declined'`.
-- [ ] Generate dan jalankan migrasi Drizzle: dari `cukkr-backend/`, jalankan `bunx drizzle-kit generate` lalu `bunx drizzle-kit migrate`.
+- [x] Di `cukkr-backend/src/modules/bookings/model.ts`, ubah `BookingDeclineInput.reason` dari `t.String({ minLength: 1, maxLength: 500 })` menjadi `t.Optional(t.String({ maxLength: 500 }))`.
+- [x] Di `cukkr-backend/src/modules/bookings/service.ts` method `declineBooking`, ubah `notes: input.reason` menjadi `notes: input.reason ?? null` agar tidak crash ketika reason tidak dikirim.
+- [x] Di `cukkr-backend/src/modules/notifications/schema.ts`, tambahkan kolom `actionedAs: text('actioned_as')` (nullable, default null) ke tabel `notification`.
+- [x] Di `cukkr-backend/src/modules/notifications/model.ts`, tambahkan field `actionedAs: t.Nullable(t.Union([t.Literal('accepted'), t.Literal('declined')]))` ke `NotificationListItem`.
+- [x] Di `cukkr-backend/src/modules/notifications/service.ts` method `toNotificationListItem`, include `actionedAs: row.actionedAs as ...` dari row database.
+- [x] Di `cukkr-backend/src/modules/notifications/service.ts` method `executeAcceptAction` (blok `booking`), setelah `BookingService.acceptBooking` berhasil, update `notification.actionedAs = 'accepted'` untuk notification row yang bersangkutan.
+- [x] Di `cukkr-backend/src/modules/notifications/service.ts` method `executeDeclineAction` (blok `booking`), hapus baris `if (!reason) throw new AppError(...)`, jadikan reason opsional, dan setelah `BookingService.declineBooking` berhasil update `notification.actionedAs = 'declined'`.
+- [x] Generate dan jalankan migrasi Drizzle: dari `cukkr-backend/`, jalankan `bunx drizzle-kit generate` lalu `bunx drizzle-kit migrate`.
 
 **Type Sync:**
-- [ ] Jalankan backend dev server (`bun run dev` dari `cukkr-backend/`), lalu sync frontend types: dari `cukkr-frontend/`, jalankan `bunx type-share-eden-elysia sync http://localhost:3000/types/app.d.ts`.
+- [x] Jalankan backend dev server (`bun run dev` dari `cukkr-backend/`), lalu sync frontend types: dari `cukkr-frontend/`, jalankan `bunx type-share-eden-elysia sync http://localhost:3000/types/app.d.ts`.
 
 **Frontend — NotificationCard:**
-- [ ] Di `cukkr-frontend/src/features/notifications/components/NotificationCard.tsx`, tambahkan badge "Accepted" berwarna hijau (gunakan `StatusBadge` dengan variant sesuai atau label `"Accepted"`) di bawah teks notifikasi saat `status === 'accepted'`, sejajar dengan posisi badge "Declined" yang sudah ada.
+- [x] Di `cukkr-frontend/src/features/notifications/components/NotificationCard.tsx`, tambahkan badge "Accepted" berwarna hijau (gunakan `StatusBadge` dengan variant sesuai atau label `"Accepted"`) di bawah teks notifikasi saat `status === 'accepted'`, sejajar dengan posisi badge "Declined" yang sudah ada.
 
 **Frontend — NotificationsListScreen:**
-- [ ] Di `cukkr-frontend/src/features/notifications/screens/NotificationsListScreen.tsx`, ubah logika `status` dari `notif.actionType !== null ? 'pending' : 'accepted'` menjadi `notif.actionedAs === 'accepted' ? 'accepted' : notif.actionedAs === 'declined' ? 'declined' : 'pending'`.
-- [ ] Ubah `onAccept` pada `NotificationCard` dari `acceptMutation.mutate(notif.id)` menjadi navigasi ke `"/d/booking-detail"` dengan params `{ id: notif.referenceId, action: "accept" }`.
-- [ ] Ubah `onDecline` pada `NotificationCard` dari `declineMutation.mutate(...)` menjadi navigasi ke `"/d/booking-detail"` dengan params `{ id: notif.referenceId, action: "decline" }`.
-- [ ] Hapus import `useAcceptNotification` dan `useDeclineNotification` karena tidak lagi digunakan di screen ini.
+- [x] Di `cukkr-frontend/src/features/notifications/screens/NotificationsListScreen.tsx`, ubah logika `status` dari `notif.actionType !== null ? 'pending' : 'accepted'` menjadi `notif.actionedAs === 'accepted' ? 'accepted' : notif.actionedAs === 'declined' ? 'declined' : 'pending'`.
+- [x] Ubah `onAccept` pada `NotificationCard` dari `acceptMutation.mutate(notif.id)` menjadi navigasi ke `"/d/booking-detail"` dengan params `{ id: notif.referenceId, action: "accept" }`.
+- [x] Ubah `onDecline` pada `NotificationCard` dari `declineMutation.mutate(...)` menjadi navigasi ke `"/d/booking-detail"` dengan params `{ id: notif.referenceId, action: "decline" }`.
+- [ ] Hapus import `useAcceptNotification` dan `useDeclineNotification` karena tidak lagi digunakan di screen ini. *(skipped: hooks masih digunakan untuk invitation accept/decline di ConfirmationModal)*
 
 **Frontend — DeclineReasonModal (komponen baru):**
-- [ ] Buat `cukkr-frontend/src/features/schedule/components/DeclineReasonModal.tsx`. Komponen menerima props: `visible: boolean`, `onSend: (reason?: string) => void`, `onCancel: () => void`, `isSending: boolean`. Tampilkan modal/bottomsheet dengan judul "Decline this booking?", subtitle opsional "You can add a reason for the customer (optional).", `MultilineInputField` untuk input reason, tombol "Send" (primary, disabled saat `isSending`) dan tombol "Cancel".
+- [x] Buat `cukkr-frontend/src/features/schedule/components/DeclineReasonModal.tsx`. Komponen menerima props: `visible: boolean`, `onSend: (reason?: string) => void`, `onCancel: () => void`, `isSending: boolean`. Tampilkan modal/bottomsheet dengan judul "Decline this booking?", subtitle opsional "You can add a reason for the customer (optional).", `MultilineInputField` untuk input reason, tombol "Send" (primary, disabled saat `isSending`) dan tombol "Cancel".
 
 **Frontend — BookingDetailScreen:**
-- [ ] Di `cukkr-frontend/src/features/schedule/screens/BookingDetailScreen.tsx`, tambahkan state `const [declineReason, setDeclineReason] = useState('')`.
-- [ ] Ganti `ConfirmationModal` dengan `visible={modalType === "decline"}` yang saat ini ada dengan `DeclineReasonModal` yang baru dibuat. Pass `visible={modalType === "decline"}`, `onSend={(reason) => handleDecline(reason)}`, `onCancel={() => setModalType(null)}`, `isSending={isDeclining}`.
-- [ ] Update `handleDecline` untuk menerima parameter `reason?: string` dan kirim ke `declineBooking({ id, reason })` — hapus hardcoded `reason: "Declined by barber"`.
+- [ ] Di `cukkr-frontend/src/features/schedule/screens/BookingDetailScreen.tsx`, tambahkan state `const [declineReason, setDeclineReason] = useState('')`. *(skipped: state dikelola di dalam DeclineReasonModal, tidak perlu di parent screen)*
+- [x] Ganti `ConfirmationModal` dengan `visible={modalType === "decline"}` yang saat ini ada dengan `DeclineReasonModal` yang baru dibuat. Pass `visible={modalType === "decline"}`, `onSend={(reason) => handleDecline(reason)}`, `onCancel={() => setModalType(null)}`, `isSending={isDeclining}`.
+- [x] Update `handleDecline` untuk menerima parameter `reason?: string` dan kirim ke `declineBooking({ id, reason })` — hapus hardcoded `reason: "Declined by barber"`.
 
 **Manual Verification (Human Checklist):**
 - [ ] Buka halaman notifikasi. Untuk appointment yang belum diproses: pastikan tombol Accept dan Decline muncul di notification card.
