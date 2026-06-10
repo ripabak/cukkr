@@ -4,3 +4,9 @@
 [submodule "cukkr-backend"]
 	path = cukkr-backend
 	url = git@github.com:ripabak/cukkr-backend.git
+[submodule "cukkr-strapi"]
+	path = cukkr-strapi
+	url = git@github.com:ripabak/cukkr-strapi.git
+[submodule "cukkr-web"]
+	path = cukkr-web
+	url = git@github.com:ripabak/cukkr-web.git
