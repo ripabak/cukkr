@@ -79,3 +79,93 @@ Web Bundled 216ms node_modules/expo-router/entry.js (1 module)
 Web node_modules/expo-router/entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
  LOG  [web] Logs will appear in the browser console
 Web Bundled 20ms node_modules/@tanstack/query-devtools/build/DevtoolsComponent/3PTWN7RB.js (1 module)
+Unable to resolve "@/src/components/FilterPicker" from "src/features/schedule/screens/ScheduleActiveBookingsScreen.tsx"
+[0m [90m 2 |[39m [36mimport[39m { [33mScreenShell[39m } [36mfrom[39m [32m"@/src/components/ScreenShell"[39m[33m;[39m
+ [90m 3 |[39m [36mimport[39m {
+[31m[1m>[22m[39m[90m 4 |[39m   [33mSCHEDULE_STATUS_OPTIONS[39m[33m,[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m   [33mStatusFilterMenu[39m[33m,[39m
+ [90m 6 |[39m } [36mfrom[39m [32m"@/src/components/StatusFilterMenu"[39m[33m;[39m
+ [90m 7 |[39m [36mimport[39m { [33mCalendarModal[39m } [36mfrom[39m [32m"@/src/features/schedule/components/CalendarModal"[39m[33m;[39m[0m
+
+Import stack:
+
+ src/features/schedule/screens/ScheduleActiveBookingsScreen.tsx
+ | import "@/src/components/FilterPicker"
+
+ app/d/(schedule)/schedule-active-bookings.tsx
+ | import "@/src/features/schedule/screens/ScheduleActiveBookingsScreen"
+
+ app (require.context)
+
+› Detected a change in metro.config.js. Restart the server to see the new results.
+Unable to resolve "@/src/components/AppText" from "src/lib/providers/toast/ToastContainer.tsx"
+[0m [90m 1 |[39m [36mimport[39m { useFrame } [36mfrom[39m [32m"@/src/components/FrameContext"[39m[33m;[39m
+ [90m 2 |[39m [36mimport[39m [33mReact[39m[33m,[39m { useEffect[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m {
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m   [33mAnimated[39m[33m,[39m
+ [90m 5 |[39m   [33mPlatform[39m[33m,[39m
+ [90m 6 |[39m   [33mStyleSheet[39m[33m,[39m[0m
+
+Import stack:
+
+ src/lib/providers/toast/ToastContainer.tsx
+ | import "@/src/components/AppText"
+
+ src/lib/providers/toast/index.ts
+ | import "./ToastContainer"
+
+ src/lib/providers/index.ts
+ | import "./toast"
+
+ app/_layout.tsx
+ | import "@/src/lib/providers"
+
+ app (require.context)
+
+Unable to resolve "@/src/features/home/screens/WalkInQrScreen" from "app/d/(barbershop)/walkin-qr.tsx"
+
+Import stack:
+
+ app/d/(barbershop)/walkin-qr.tsx
+ | import "@/src/features/home/screens/WalkInQrScreen"
+
+ app (require.context)
+
+Unable to resolve "@/src/hooks/usePwaTheme" from "app/_layout.tsx"
+[0m [90m 3 |[39m [36mimport[39m { [33mQueryProvider[39m } [36mfrom[39m [32m"@/src/lib/providers"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { [33mPWAInstallBanner[39m } [36mfrom[39m [32m"@/src/components/PWAInstallBanner"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { [33mPwaStatusBar[39m } [36mfrom[39m [32m"@/src/hooks/usePwaTheme"[39m[33m;[39m
+ [90m   |[39m                               [31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m { [33mI18nProvider[39m } [36mfrom[39m [32m"@/src/lib/i18n/provider"[39m[33m;[39m
+ [90m 7 |[39m [36mimport[39m type { [33mLanguage[39m } [36mfrom[39m [32m"@/src/lib/i18n"[39m[33m;[39m
+ [90m 8 |[39m [36mimport[39m { authClient } [36mfrom[39m [32m"@/src/lib/auth-client"[39m[33m;[39m[0m
+
+Import stack:
+
+ app/_layout.tsx
+ | import "@/src/hooks/usePwaTheme"
+
+ app (require.context)
+
+› Detected a change in metro.config.js. Restart the server to see the new results.
+Unable to resolve "@/src/theme/styles" from "src/features/billing/screens/BillingScreen.tsx"
+[0m [90m 17 |[39m [36mimport[39m { useI18nContext } [36mfrom[39m [32m"@/src/lib/i18n/provider"[39m[33m;[39m
+ [90m 18 |[39m [36mimport[39m { [33mColors[39m } [36mfrom[39m [32m"@/src/theme/colors"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 19 |[39m [36mimport[39m { [33mNeu[39m } [36mfrom[39m [32m"@/src/theme/styles"[39m[33m;[39m
+ [90m    |[39m                      [31m[1m^[22m[39m
+ [90m 20 |[39m [36mimport[39m { usePlans[33m,[39m useSubscription[33m,[39m usePayments } [36mfrom[39m [32m"../hooks"[39m[33m;[39m
+ [90m 21 |[39m [36mimport[39m { [33mPAYMENT_GROUPS[39m[33m,[39m [33mPAYMENT_METHODS[39m } [36mfrom[39m [32m"../methods"[39m[33m;[39m
+ [90m 22 |[39m [36mimport[39m { billingService[33m,[39m type [33mPlanDto[39m } [36mfrom[39m [32m"../services"[39m[33m;[39m[0m
+
+Import stack:
+
+ src/features/billing/screens/BillingScreen.tsx
+ | import "@/src/theme/styles"
+
+ app/d/(profile)/billing.tsx
+ | import "@/src/features/billing/screens/BillingScreen"
+
+ app (require.context)
+

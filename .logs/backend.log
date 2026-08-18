@@ -912,3 +912,23 @@ $ bun run --watch src/main.ts
 🦊 2026-08-19 01:39:22.880 INFO 13ms GET     /api/bookings 200  
 🦊 2026-08-19 01:39:22.902 INFO 34ms GET     /api/analytics 200  
 🦊 2026-08-19 01:39:31.120 INFO 20ms GET     /api/bookings 200  
+🦊 2026-08-19 01:41:28.343 INFO 77ms GET     /auth/api/get-session 200  
+🦊 2026-08-19 01:41:28.364 INFO 98ms GET     /api/bookings/events 200  
+🦊 2026-08-19 01:41:28.370 INFO 5ms GET     /api/bookings/in-progress 200  
+🦊 2026-08-19 01:41:28.371 INFO 6ms GET     /api/bookings/requests 200  
+🦊 2026-08-19 01:41:28.371 INFO 6ms GET     /api/pin/current 200  
+🦊 2026-08-19 01:41:28.379 INFO 1ms GET     /api/bookings/date-markers 200  
+🦊 2026-08-19 01:41:28.390 INFO 12ms GET     /api/bookings/summary 200  
+🦊 2026-08-19 01:41:28.390 INFO 13ms GET     /api/bookings 200  
+🦊 2026-08-19 01:41:28.438 INFO 19ms GET     /auth/api/get-session 200  
+🦊 2026-08-19 01:41:28.442 INFO 23ms GET     /api/bookings 200  
+🦊 2026-08-19 01:41:28.450 INFO 31ms GET     /api/analytics 200  
+┌─────────────────────────────┐
+│                             │
+│       Elysia v1.4.28        │
+│                             │
+│  🦊  http://localhost:3000  │
+│                             │
+└─────────────────────────────┘
+🦊 Elysia is running at localhost:3000
+error: Cannot find module './modules/public-booking/handler' from '/Users/ripa/Projects/cukkr/cukkr-backend/src/app.ts'
