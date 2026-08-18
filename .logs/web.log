@@ -1,0 +1,14 @@
+$ next dev --port "3001"
+▲ Next.js 16.2.4 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://192.168.19.202:3001
+- Environments: .env
+✓ Ready in 573ms
+
+ GET / 200 in 763ms (next.js: 229ms, application-code: 534ms)
+ GET /pricing 200 in 307ms (next.js: 51ms, application-code: 256ms)
+ GET /mockServiceWorker.js 404 in 986ms (next.js: 756ms, application-code: 229ms)
+ GET /mockServiceWorker.js 404 in 191ms (next.js: 33ms, application-code: 159ms)
+ GET /mockServiceWorker.js 404 in 223ms (next.js: 51ms, application-code: 173ms)
+[?25h
+error: script "dev" exited with code 143
