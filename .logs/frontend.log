@@ -23,36 +23,59 @@ Waiting on http://localhost:8081
 Logs for your project will appear below.
 Web node_modules/expo-router/entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
  LOG  [web] Logs will appear in the browser console
-Web Bundled 675ms node_modules/@tanstack/query-devtools/build/DevtoolsComponent/3PTWN7RB.js (3 modules)
-Web Bundled 1572ms node_modules/expo-router/entry.js (2072 modules)
-Web node_modules/expo-router/entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
-Web Bundled 153ms node_modules/expo-router/entry.js (1 module)
- LOG  [web] Logs will appear in the browser console
-Web Bundled 11ms node_modules/@tanstack/query-devtools/build/DevtoolsComponent/3PTWN7RB.js (1 module)
-Web node_modules/expo-router/entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
-Web Bundled 160ms node_modules/expo-router/entry.js (1 module)
- LOG  [web] Logs will appear in the browser console
-Web Bundled 35ms node_modules/@tanstack/query-devtools/build/DevtoolsComponent/3PTWN7RB.js (1 module)
-Web node_modules/expo-router/entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
-Web Bundled 124ms node_modules/expo-router/entry.js (1 module)
- LOG  [web] Logs will appear in the browser console
-Web Bundled 14ms node_modules/@tanstack/query-devtools/build/DevtoolsComponent/3PTWN7RB.js (1 module)
-Web Bundled 88ms node_modules/expo-router/entry.js (1 module)
- LOG  [web] Logs will appear in the browser console
-Web Bundled 27ms node_modules/@tanstack/query-devtools/build/DevtoolsComponent/3PTWN7RB.js (1 module)
-Web node_modules/expo-router/entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
-Web Bundled 135ms node_modules/expo-router/entry.js (1 module)
- LOG  [web] Logs will appear in the browser console
-Web Bundled 37ms node_modules/@tanstack/query-devtools/build/DevtoolsComponent/3PTWN7RB.js (1 module)
+Web Bundled 1178ms node_modules/@tanstack/query-devtools/build/DevtoolsComponent/3PTWN7RB.js (1 module)
+Web Bundled 1837ms node_modules/expo-router/entry.js (2517 modules)
 Web node_modules/expo-router/entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
 Web Bundled 86ms node_modules/expo-router/entry.js (1 module)
  LOG  [web] Logs will appear in the browser console
-Web Bundled 112ms node_modules/@tanstack/query-devtools/build/DevtoolsComponent/3PTWN7RB.js (1 module)
+Web Bundled 22ms node_modules/@tanstack/query-devtools/build/DevtoolsComponent/3PTWN7RB.js (1 module)
 Web node_modules/expo-router/entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
-Web Bundled 90ms node_modules/expo-router/entry.js (1 module)
+Web Bundled 128ms node_modules/expo-router/entry.js (1 module)
  LOG  [web] Logs will appear in the browser console
-Web Bundled 25ms node_modules/@tanstack/query-devtools/build/DevtoolsComponent/3PTWN7RB.js (1 module)
+Web Bundled 38ms node_modules/@tanstack/query-devtools/build/DevtoolsComponent/3PTWN7RB.js (1 module)
 Web node_modules/expo-router/entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
-Web Bundled 120ms node_modules/expo-router/entry.js (1 module)
+Web Bundled 265ms node_modules/expo-router/entry.js (1 module)
  LOG  [web] Logs will appear in the browser console
-Web Bundled 76ms node_modules/@tanstack/query-devtools/build/DevtoolsComponent/3PTWN7RB.js (1 module)
+Web Bundled 67ms node_modules/@tanstack/query-devtools/build/DevtoolsComponent/3PTWN7RB.js (1 module)
+Web node_modules/expo-router/entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+Web Bundled 95ms node_modules/expo-router/entry.js (1 module)
+ LOG  [web] Logs will appear in the browser console
+Web Bundled 19ms node_modules/@tanstack/query-devtools/build/DevtoolsComponent/3PTWN7RB.js (1 module)
+Web node_modules/expo-router/entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+Web Bundled 144ms node_modules/expo-router/entry.js (1 module)
+ LOG  [web] Logs will appear in the browser console
+Web Bundled 9ms node_modules/@tanstack/query-devtools/build/DevtoolsComponent/3PTWN7RB.js (1 module)
+Web node_modules/expo-router/entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+Web Bundled 131ms node_modules/expo-router/entry.js (1 module)
+ LOG  [web] Logs will appear in the browser console
+Web Bundled 6ms node_modules/@tanstack/query-devtools/build/DevtoolsComponent/3PTWN7RB.js (1 module)
+Web node_modules/expo-router/entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+Web Bundled 89ms node_modules/expo-router/entry.js (1 module)
+ LOG  [web] Logs will appear in the browser console
+Web Bundled 3ms node_modules/@tanstack/query-devtools/build/DevtoolsComponent/3PTWN7RB.js (1 module)
+Web node_modules/expo-router/entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+Web Bundled 98ms node_modules/expo-router/entry.js (1 module)
+ LOG  [web] Logs will appear in the browser console
+Web Bundled 3ms node_modules/@tanstack/query-devtools/build/DevtoolsComponent/3PTWN7RB.js (1 module)
+Web Bundled 151ms node_modules/expo-router/entry.js (1 module)
+ LOG  [web] Logs will appear in the browser console
+Web Bundled 10ms node_modules/@tanstack/query-devtools/build/DevtoolsComponent/3PTWN7RB.js (1 module)
+Web Bundled 342ms node_modules/expo-router/entry.js (1 module)
+ LOG  [web] Logs will appear in the browser console
+Web Bundled 36ms node_modules/@tanstack/query-devtools/build/DevtoolsComponent/3PTWN7RB.js (1 module)
+Web node_modules/expo-router/entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+Web Bundled 111ms node_modules/expo-router/entry.js (1 module)
+ LOG  [web] Logs will appear in the browser console
+Web Bundled 20ms node_modules/@tanstack/query-devtools/build/DevtoolsComponent/3PTWN7RB.js (1 module)
+Web node_modules/expo-router/entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+Web Bundled 125ms node_modules/expo-router/entry.js (1 module)
+ LOG  [web] Logs will appear in the browser console
+Web Bundled 19ms node_modules/@tanstack/query-devtools/build/DevtoolsComponent/3PTWN7RB.js (1 module)
+Web node_modules/expo-router/entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+Web Bundled 130ms node_modules/expo-router/entry.js (1 module)
+ LOG  [web] Logs will appear in the browser console
+Web Bundled 2ms node_modules/@tanstack/query-devtools/build/DevtoolsComponent/3PTWN7RB.js (1 module)
+Web Bundled 216ms node_modules/expo-router/entry.js (1 module)
+Web node_modules/expo-router/entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+ LOG  [web] Logs will appear in the browser console
+Web Bundled 20ms node_modules/@tanstack/query-devtools/build/DevtoolsComponent/3PTWN7RB.js (1 module)
